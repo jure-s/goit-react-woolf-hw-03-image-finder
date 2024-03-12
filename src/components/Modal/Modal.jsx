@@ -3,9 +3,10 @@ import { Component } from 'react';
 import { createPortal } from 'react-dom';
 import { Overlay, StyledModal } from './Modal.styled';
 
-const portalRef = document.getElementById('portal');
+const portalRef = document.body;
 
 class Modal extends Component {
+
   onEscButtonClose = e => {
     if (e.code === 'Escape') {
       this.props.closeModal();
